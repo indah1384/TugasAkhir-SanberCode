@@ -1,0 +1,23 @@
+{
+  "name": "web-cucumber",
+  "version": "1.0.0",
+  "main": "index.js",
+"scripts": {
+    "test": "wdio run ./wdio.conf.js",
+    "wdio": "wdio run ./wdio.conf.js",
+    "allure-report": "allure generate reports/allure-results/ --clean; allure open"
+},
+  "author": "indah",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@wdio/cli": "^9.4.3",
+    "@wdio/cucumber-framework": "^9.4.3",
+    "@wdio/local-runner": "^9.4.3",
+    "@wdio/spec-reporter": "^9.4.3",
+    "@wdio/visual-service": "^6.2.5"
+  },
+  "dependencies": {
+    "@wdio/allure-reporter": "^9.4.3"
+  }
+}
