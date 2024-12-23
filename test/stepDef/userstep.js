@@ -15,7 +15,7 @@ Given(/^I navigate to the user menu$/, async () => {
 });
 
 When(/^I create a new user$/, async () => {
-    await userPage.addUser('indah','indahtess@gmail.com','12345678');
+    await userPage.addUser('indah','indahTry@gmail.com','12345678');
 });
 
 Then(/^I should see a success message$/, async () => {

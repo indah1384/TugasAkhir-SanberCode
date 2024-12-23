@@ -16,6 +16,7 @@ When(/^I login with valid credentials$/, async () => {
 
 Then(/^I should be on the Dashboard page$/, async () => {
     await dashboardPage.assertDashboardUrl();
+    await loginPage.logout();
 });
 
 

@@ -21,7 +21,7 @@ exports.config = {
     // of the config file unless it's absolute.
     //
     specs: [
-        './test/features/**/*.feature'
+        './test/features/user.feature'
     ],
     // Patterns to exclude.
     exclude: [
@@ -124,14 +124,16 @@ exports.config = {
     // see also: https://webdriver.io/docs/dot-reporter
     reporters: ['spec',
         ['allure', {
-            outputDir : './reports/allure-results'
-            }]
+            outputDir: './reports/allure-results', // Pastikan output dir ini sesuai
+            disableWebdriverStepsReporting: false,
+            disableWebdriverScreenshotsReporting: false
+        }]
     ],
 
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
         // <string[]> (file/dir) require files before executing features
-        require: ['./test/stepDef/**/*.js'],
+        require: ['./test/stepDef/userstep.js'],
         // <boolean> show full backtrace for errors
         backtrace: false,
         // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)

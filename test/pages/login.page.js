@@ -31,8 +31,8 @@ class loginPage {
         await this.loginButton.click();
     }
 
-    async logout(profile,logout) {
-    await this.profileButton.click(profile); 
+    async logout() {
+    await this.profileButton.click(); 
     await this.logoutButton.click();  
     }
 
